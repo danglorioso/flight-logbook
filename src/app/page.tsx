@@ -1,6 +1,6 @@
 // src/app/page.tsx
 import Link from 'next/link';
-import Header from '@/components/layout/Header';
+import Header from '@/components/Header';
 import { ArrowRight, Plane, Book, Map } from 'lucide-react';
 
 export default function LandingPage() {

@@ -2,7 +2,7 @@
 'use client';
 
 import { useState } from 'react';
-import Header from '@/components/layout/Header';
+import Header from '@/components/Header';
 import SearchBar from '@/components/flights/SearchBar';
 import FlightTable from '@/components/flights/FlightTable';
 import FlightStatsCards from '@/components/flights/FlightStatsCards';

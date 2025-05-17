@@ -1,7 +1,6 @@
 // src/components/layout/Header.tsx
 import Link from 'next/link';
 import { Plus, User } from 'lucide-react';
-import { useState } from 'react';
 
 type HeaderProps = {
   onNewFlightClick: () => void;

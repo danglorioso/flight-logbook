@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Serif, Inter } from "next/font/google";
-import "./globals.css";
-
 import { ClerkProvider } from '@clerk/nextjs';
+import "./globals.css";
 
 
 const ibmPlexSerif = IBM_Plex_Serif({
