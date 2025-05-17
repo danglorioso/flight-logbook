@@ -1,4 +1,5 @@
 // src/components/flights/SearchBar.tsx
+"use client";
 import { Search } from 'lucide-react';
 
 type SearchBarProps = {

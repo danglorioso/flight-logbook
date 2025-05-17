@@ -1,4 +1,5 @@
 // src/components/layout/Footer.tsx
+"use client";
 import Link from 'next/link';
 
 export default function Footer() {
@@ -41,6 +42,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300">
+          <p className="leading-tight text-lg mb-2">Created by <Link href="https://www.danglorioso.com" className="font-bold text-slate-300 hover:text-white transition">Dan Glorioso</Link>.</p>
           <p>&copy; {new Date().getFullYear()} SimPilot Logbook. All rights reserved.</p>
         </div>
       </div>

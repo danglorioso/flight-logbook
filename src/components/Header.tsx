@@ -1,13 +1,16 @@
 // src/components/layout/Header.tsx
+"use client";
 import Link from 'next/link';
 import { Plus, User } from 'lucide-react';
+import { SignInButton, SignOutButton, useUser } from '@clerk/nextjs';
 
 type HeaderProps = {
   onNewFlightClick: () => void;
-  isLoggedIn?: boolean;
 }
 
-export default function Header({ onNewFlightClick, isLoggedIn = false }: HeaderProps) {
+export default function Header({ onNewFlightClick }: HeaderProps) {
+  const { isSignedIn } = useUser();
+
   return (
     <header className="bg-blue-900 text-white p-6 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
@@ -18,7 +21,7 @@ export default function Header({ onNewFlightClick, isLoggedIn = false }: HeaderP
           <p className="text-blue-200 mt-1">Your digital flight simulation journal</p>
         </div>
         <div className="flex items-center space-x-4">
-          {isLoggedIn ? (
+          {isSignedIn ? (
             <>
               <button 
                 onClick={onNewFlightClick}
@@ -30,15 +33,16 @@ export default function Header({ onNewFlightClick, isLoggedIn = false }: HeaderP
               <Link href="/dashboard" className="text-white hover:text-blue-200">
                 Dashboard
               </Link>
-              <Link href="/api/auth/signout" className="text-white hover:text-blue-200">
-                Sign Out
-              </Link>
+              <SignOutButton>
+                <button className="text-sm text-red-600 hover:text-red-500">Sign out</button>
+              </SignOutButton>
             </>
           ) : (
-            <Link href="/api/auth/signin" className="bg-blue-700 hover:bg-blue-600 px-4 py-2 rounded flex items-center transition duration-200">
-              <User size={18} className="mr-2" />
-              Sign In
-            </Link>
+            <SignInButton mode="modal">
+              <button className="bg-blue-700 hover:bg-blue-600 px-4 py-2 rounded transition duration-200">
+                Sign in
+              </button>
+            </SignInButton>
           )}
         </div>
       </div>

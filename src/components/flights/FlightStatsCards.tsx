@@ -1,4 +1,5 @@
 // src/components/flights/FlightStatsCards.tsx
+"use client";
 import { Clock, Map, Plane } from 'lucide-react';
 
 type FlightStatsProps = {

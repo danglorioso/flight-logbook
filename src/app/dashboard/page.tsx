@@ -106,7 +106,6 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-blue-50">
       <Header 
-        isLoggedIn={true} 
         onNewFlightClick={() => {
           setEditFlight(null);
           setIsAddModalOpen(true);

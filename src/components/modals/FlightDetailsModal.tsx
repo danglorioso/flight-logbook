@@ -1,4 +1,5 @@
 // src/components/modals/FlightDetailsModal.tsx
+"use client";
 import { Calendar, Clock, Navigation, Plane, X } from 'lucide-react';
 import { Flight } from '@/types/flight';
 

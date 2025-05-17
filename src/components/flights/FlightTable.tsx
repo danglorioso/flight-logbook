@@ -1,4 +1,5 @@
 // src/components/flights/FlightTable.tsx
+"use client";
 import { Calendar, Clock, Plane } from 'lucide-react';
 import { Flight } from '@/types/flight';
 
